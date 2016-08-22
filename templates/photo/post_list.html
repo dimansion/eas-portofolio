@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load staticfiles %}
+	<meta charset="utf-8">
+    <title>EAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Styles -->
+    <link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+    <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="{% static 'assets/css/photographer.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/js/shadowbox/shadowbox.css' %}">
+    
+    <!-- HTML5 shim -->
+    <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>    
+<body>
+	
+	<div class="masthead clearfix">
+			
+		<div class="container">
+			
+			<div class="logo pull-left">sekaade</div>
+			
+			<div class="socials pull-right">
+				<a href=""><i class="fa fa-twitter"></i></a> <!-- your twitter link -->
+				<a href=""><i class="fa fa-facebook"></i></a> <!-- your facebook link -->
+				<a href=""><i class="fa fa-linkedin"></i></a> <!-- your linkedin link -->
+				<a href=""><i class="fa fa-pinterest"></i></a> <!-- your pinterest link -->
+				<a href=""><i class="fa fa-envelope"></i></a> <!-- your email address -->
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	
+	<div class="container">
+		
+		<div class="clearfix">
+		
+		<ul class="filter-nav">
+			<li class="active"><a data-id="all" href="">All</a></li>
+			<li><a data-id="portraits" href="">Portraits</a></li>
+			<li><a data-id="landscapes" href="">Landscapes</a></li>
+			<li><a data-id="animals" href="">Animals</a></li>
+			<li><a data-id="streets" href="">Street</a></li>
+			<li><a data-id="designs" href="">Design</a></li>
+		</ul>
+		
+		</div>
+		
+		<div class="row">
+		
+		<ul class="thumbnails" id="thumbnails">
+		
+			<li class="col-md-3 col-sm-3 col-xs-12" data-id="1" data-type="portraits">
+				<a href="{% static 'assets/img/photo_01.jpg' %}" class="thumbnail">
+				  <img src="{% static 'assets/img/photo_01.jpg' %}" alt="" />
+				  <span class="caption"><i class="icon-plus-sign"></i></span>
+				</a>
+			</li>
+			
+			<li class="col-md-3 col-sm-3 col-xs-12" data-id="2" data-type="landscapes">
+				<a href="assets/img/photo_02.jpg" class="thumbnail">
+				  <img src="assets/img/photo_02.jpg" alt="" />
+				  <span class="caption"><i class="icon-plus-sign"></i></span>
+				</a>
+			</li>
+			
+			<li class="col-md-3 col-sm-3 col-xs-12" data-id="3" data-type="portraits">
+				<a href="assets/img/photo_03.jpg" class="thumbnail">
+				  <img src="assets/img/photo_03.jpg" alt="" />
+				  <span class="caption"><i class="icon-plus-sign"></i></span>
+				</a>
+			</li>
+			
+			<li class="col-md-3 col-sm-3 col-xs-12" data-id="4" data-type="landscapes">
+				<a href="assets/img/photo_04.jpg" class="thumbnail">
+				  <img src="assets/img/photo_04.jpg" alt="" />
+				  <span class="caption"><i class="icon-plus-sign"></i></span>
+				</a>
+			</li>
+			
+			<li class="col-md-3 col-sm-3 col-xs-12" data-id="5" data-type="portraits">
+				<a href="assets/img/photo_05.jpg" class="thumbnail">
+				  <img src="assets/img/photo_05.jpg" alt="" />
+				  <span class="caption"><i class="icon-plus-sign"></i></span>
+				</a>
+			</li>
+			
+			<li class="col-md-3 col-sm-3 col-xs-12" data-id="6" data-type="portraits">
+				<a href="assets/img/photo_06.jpg" class="thumbnail">
+				  <img src="assets/img/photo_06.jpg" alt="" />
+				  <span class="caption"><i class="icon-plus-sign"></i></span>
+				</a>
+			</li>
+			
+			<li class="col-md-3 col-sm-3 col-xs-12" data-id="7" data-type="landscapes">
+				<a href="assets/img/photo_07.jpg" class="thumbnail">
+				  <img src="assets/img/photo_07.jpg" alt="" />
+				  <span class="caption"><i class="icon-plus-sign"></i></span>
+				</a>
+			</li>
+			
+			<li class="col-md-3 col-sm-3 col-xs-12" data-id="8" data-type="landscapes">
+				<a href="assets/img/photo_08.jpg" class="thumbnail">
+				  <img src="assets/img/photo_08.jpg" alt="" />
+				  <span class="caption"><i class="icon-plus-sign"></i></span>
+				</a>
+			</li>
+			
+			<li class="col-md-3 col-sm-3 col-xs-12" data-id="9" data-type="landscapes">
+				<a href="assets/img/photo_09.jpg" class="thumbnail">
+				  <img src="assets/img/photo_09.jpg" alt="" />
+				  <span class="caption"><i class="icon-plus-sign"></i></span>
+				</a>
+			</li>
+			
+			<li class="col-md-3 col-sm-3 col-xs-12" data-id="10" data-type="landscapes">
+				<a href="assets/img/photo_10.jpg" class="thumbnail">
+				  <img src="assets/img/photo_10.jpg" alt="" />
+				  <span class="caption"><i class="icon-plus-sign"></i></span>
+				</a>
+			</li>
+			
+			<li class="col-md-3 col-sm-3 col-xs-12" data-id="11" data-type="landscapes">
+				<a href="assets/img/photo_11.jpg" class="thumbnail">
+				  <img src="assets/img/photo_11.jpg" alt="" />
+				  <span class="caption"><i class="icon-plus-sign"></i></span>
+				</a>
+			</li>
+			
+			<li class="col-md-3 col-sm-3 col-xs-12" data-id="12" data-type="animals">
+				<a href="assets/img/photo_12.jpg" class="thumbnail">
+				  <img src="assets/img/photo_12.jpg" alt="" />
+				  <span class="caption"><i class="icon-plus-sign"></i></span>
+				</a>
+			</li>
+			
+		</ul>
+		
+		</div>
+		
+	</div>
+	
+	<!-- Javascript -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="{% static 'assets/js/bootstrap.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/shadowbox/shadowbox.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/jquery.easing.s' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/jquery.quicksand.js' %}"></script>
+    <script src="{% static 'assets/js/photographer.js' %}"></script>
+
+</body>
+</html>
