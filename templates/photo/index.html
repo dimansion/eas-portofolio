@@ -35,7 +35,7 @@
 				<a href="https://www.facebook.com/Ekadesaputra?fref=ts" target="_blank"><i class="fa fa-facebook"></i></a> <!-- your facebook link -->
 				<a href="https://www.instagram.com/ekaadesaputra" target="_blank"><i class="fa fa-instagram"></i></a> <!-- your linkedin link -->
 				<!-- <a href=""><i class="fa fa-pinterest"></i></a> your pinterest link -->
-				<a href="https://plus.google.com/u/1/115536676947116069587/posts" target="_blank"><i class="fa fa-envelope"></i></a> <!-- your email address -->
+				<a href="#" data-toggle="popover" data-placement="left"  data-trigger="focus" data-content="sekaadeputra@gmail.com"><i class="fa fa-envelope"></i></a> <!-- your email address -->
 			</div>
 			
 		</div>
@@ -62,7 +62,7 @@
 		
 		<ul class="thumbnails" id="thumbnails">
 		{% for post in posts %}
-			<li class="col-md-3 col-sm-3 col-xs-12" data-id="1" data-type="{{ post.category }}">
+			<li class="col-md-3 col-sm-3 col-xs-12" data-id="{{ post.pk }}" data-type="{{ post.category }}">
 				<a href="{{ post.image.url }}" class="thumbnail">
 				  <img src="{{ post.image.url }}" alt="" />
 				  <span class="caption"><i class="icon-plus-sign"></i></span>
@@ -75,12 +75,17 @@
 	</div>
 	
 	<!-- Javascript -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="{% static 'assets/js/bootstrap.js' %}"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="{% static 'assets/js/shadowbox/shadowbox.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.js' %}"></script>
     <script type="text/javascript" src="{% static 'assets/js/jquery.easing.js' %}"></script>
     <script type="text/javascript" src="{% static 'assets/js/jquery.quicksand.js' %}"></script>
     <script src="{% static 'assets/js/photographer.js' %}"></script>
+    <script>
+	$(document).ready(function(){
+	    $('[data-toggle="popover"]').popover(); 
+	});
+	</script>
 
 </body>
 </html>
