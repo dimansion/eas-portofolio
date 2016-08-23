@@ -6,7 +6,6 @@ class Work(models.Model):
     Category_CHOICES = (
         ('portraits', 'Portrait'),
         ('landscapes', 'Landscape'),
-	('animals', 'Animals'),
 	('streets', 'Street'),
 	('designs', 'Design'),
     )

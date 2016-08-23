@@ -4,7 +4,7 @@ from django.db import models
 class Work(models.Model):
     name = models.CharField(max_length=30)
     Category_CHOICES = (
-        ('portraits', 'Potrait'),
+        ('portraits', 'Portrait'),
         ('landscapes', 'Landscape'),
 	('animals', 'Animals'),
 	('streets', 'Street'),
