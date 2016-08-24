@@ -8,6 +8,7 @@ class Work(models.Model):
         ('landscapes', 'Landscape'),
 	('streets', 'Street'),
 	('designs', 'Design'),
+	('still-life', 'Still life'),
     )
     category = models.CharField(max_length=10, choices=Category_CHOICES)
     image = models.ImageField (upload_to="images/",null=True,blank=True)

@@ -141,7 +141,7 @@ h1, h2, h3, h4, h5, h6 {
 .socials a {
 	float: left;
 	display: block;
-	background: #FFF;
+
 	padding: 3px 5px 5px 5px !important;
 	width: 40px;
 	height: 40px;
@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .socials a i {
-	color: #000;
+	color: #FFF;
 	font-size: 24px;
     margin-top: 5px;
 }
@@ -174,54 +174,35 @@ h1, h2, h3, h4, h5, h6 {
 
 .filter-nav {
 	list-style: none;
-	margin: 0 0 30px 0;
-	float: left;
 	padding: 0;
+	text-align: center;
 }
 
 .filter-nav li {
-	float: left;
-	margin-right: 8px;
+	margin-right: 25px;
+	display:inline-block;
 }
 
 .filter-nav li a {
-	-moz-box-shadow:inset 0px 1px 0px 0px #3e4a50;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #3e4a50;
-	box-shadow:inset 0px 1px 0px 0px #3e4a50;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #2f3c42), color-stop(1, #222b30) );
-	background:-moz-linear-gradient( center top, #2f3c42 5%, #222b30 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2f3c42', endColorstr='#222b30');
-	background-color:#2f3c42;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border-radius:3px;
-	border:1px solid #212c30;
+
 	display:inline-block;
-	color:#9da8ac;
-	font-size:12px;
+	font-size:18px;
 	padding:4px 18px;
 	text-decoration:none;
-	text-shadow:1px 1px 0px #1a2529;
+	text-align: center;
+	color: #FFF;
 }
 
 .filter-nav li a:hover {
-	-moz-box-shadow:inset 0px 1px 0px 0px #4d5a62;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #4d5a62;
-	box-shadow:inset 0px 1px 0px 0px #4d5a62;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3f4d56), color-stop(1, #2e393f) );
-	background:-moz-linear-gradient( center top, #3f4d56 5%, #2e393f 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3f4d56', endColorstr='#2e393f');
-	background-color:#3f4d56;
-	color: #FFF;
+	color: #000;
 }
 
 .filter-nav li.active a {
-	-moz-box-shadow:inset 0px 0px 10px 0px #1a2021;
-	-webkit-box-shadow:inset 0px 0px 10px 0px #1a2021;
-	box-shadow:inset 0px 0px 10px 0px #1a2021;
-	background: #2b373e;
+
 	color: #FFF;
 }
+
+
 
 @media (max-width: 767px) {
 	
@@ -245,6 +226,10 @@ h1, h2, h3, h4, h5, h6 {
 		float: none !important;
 		clear: both;
 		margin-left: -10px;
+	}
+
+	.filter-nav li {
+		margin-right: 8px;
 	}
 	
 }

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="{% static 'assets/css/photographer.css' %}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="{% static 'assets/js/shadowbox/shadowbox.css' %}">
+    <link rel="icon" href="{% static 'assets/img/eas.png' %}" type="image/png" >
     
     <!-- HTML5 shim -->
     <!--[if lt IE 9]>
@@ -53,9 +54,12 @@
 			<li><a data-id="landscapes" href="">Landscapes</a></li>
 			<li><a data-id="streets" href="">Street</a></li>
 			<li><a data-id="designs" href="">Design</a></li>
+			<li><a data-id="still-life" href="">Still Life</a></li>
 		</ul>
+
 		
 		</div>
+		<hr>
 		
 		<div class="row">
 		
@@ -65,6 +69,8 @@
 				<a href="{{ post.image.url }}" class="thumbnail">
 				  <img src="{{ post.image.url }}" alt="" />
 				  <span class="caption"><i class="icon-plus-sign"></i></span>
+				  <!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55ae89800d295a5e" async="async"></script>
+            	   <div class="addthis_native_toolbox"></div>-->
 				</a>
 			</li>
 		{% endfor %}						
