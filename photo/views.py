@@ -4,6 +4,9 @@ from .forms import WorkForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 
+def home(request):
+    return render(request, 'photo/home.html')
+
 def post_list(request):
     posts = Work.objects.all()
     return render(request, 'photo/post_list.html', {'posts': posts})

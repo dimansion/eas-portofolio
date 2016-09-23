@@ -7,6 +7,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = [
-    url(r'^$', views.post_list, name='post_list'),
+	url(r'^$', views.home, name='home'),
+    url(r'^gallery$', views.post_list, name='post_list'),
     url(r'^post/new/$', views.post_new, name='post_new'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

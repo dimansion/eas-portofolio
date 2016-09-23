@@ -6,9 +6,9 @@ class Work(models.Model):
     Category_CHOICES = (
         ('portraits', 'Portrait'),
         ('landscapes', 'Landscape'),
-	('streets', 'Street'),
-	('designs', 'Design'),
-	('still-life', 'Still life'),
+	   ('streets', 'Street'),
+	   ('designs', 'Design'),
+	   ('still-life', 'Still life'),
     )
     category = models.CharField(max_length=10, choices=Category_CHOICES)
     image = models.ImageField (upload_to="images/",null=True,blank=True,
@@ -16,6 +16,11 @@ class Work(models.Model):
             height_field='height_field',)
     height_field = models.IntegerField(default=0)
     width_field = models.IntegerField(default=0)
+    Size_CHOICES = (
+        ('portraits', 'Portrait'),
+        ('landscapes', 'Landscape'),
+    )
+    size = models.CharField(max_length=10, choices=Size_CHOICES)
 
 
     def __str__(self):

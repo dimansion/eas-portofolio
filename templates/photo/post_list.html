@@ -1,17 +1,80 @@
-{% extends 'photo/base.html' %} 
-{% block content %} 
-	<div class="row">
-		<ul class="thumbnails" id="thumbnails">
-		{% for post in posts %}
-			<li class="col-md-3 col-sm-3 col-xs-12" data-id="{{ post.pk }}" data-type="{{ post.category }}">
-				{% if post.image %}
-				<a href="{{ MEDIA_URL }}{{ post.image.url }}" class="thumbnail" rel="shadowbox[album]" title="{{ post.name }}">
-				  <img src="{{ MEDIA_URL }}{{ post.image.url }}" alt="" />
-				  <span class="caption"><i class="icon-plus-sign"></i></span>
-				</a>
-				{% endif %}
-			</li>
-		{% endfor %}						
-		</ul>		
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+{% load staticfiles %}
+	<head>
+
+		<title>Supersized - Full Screen Background Slideshow jQuery Plugin</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<link href="{% static 'assets/css/supersized.css' %}" rel="stylesheet">
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script type="text/javascript" src="{% static 'assets/js/extras.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/scripts.min.js' %}"></script>
+
+		
+		
+	</head>
+
+
+<body>
+
+	<div class="back-to-app-bar">
+		<a href="/"><img src="{% static 'assets/images/fullscreen-gallery/eas-logo.png' %}" alt="EAS" height='30px' width='65px' /></a>
 	</div>
-{% endblock %}
+
+	<div class="swipe-target"></div><!-- target for swipe -->
+
+	<!-- image files -->
+	<ul class="full-screen-gallery-images">
+		{% for post in posts %}
+		{% if post.image %}
+		<li data-thumbnail="{{ MEDIA_URL }}{{ post.image.url }}" data-caption="{{ post.name }}"><img src="{{ MEDIA_URL }}{{ post.image.url }}"></li>
+		{% endif %}
+		{% endfor %}	
+	</ul>
+
+	<!--Thumbnail Navigation-->
+	<div id="prevthumb"></div>
+	<div id="nextthumb"></div>
+	
+	<!--Arrow Navigation-->
+	<a id="prevslide" class="load-item"></a>
+	<a id="nextslide" class="load-item"></a>
+	
+	<div id="thumb-tray" class="load-item">
+		<div id="thumb-back"></div>
+		<div id="thumb-forward"></div>
+	</div>
+	
+	<!--Time Bar-->
+	<div id="progress-back" class="load-item">
+		<div id="progress-bar"></div>
+	</div>
+	
+	<!--Control Bar-->
+	<div id="controls-wrapper" class="load-item">
+		<div id="controls">
+			
+			<a id="play-button"><img id="pauseplay" src="{% static 'assets/images/fullscreen-gallery/pause.png' %}"/></a>
+		
+			<!--Slide counter-->
+			<div id="slidecounter">
+				<span class="slidenumber"></span> / <span class="totalslides"></span>
+			</div>
+			
+			<!--Slide captions displayed here-->
+			<div id="slidecaption"></div>
+			
+			<!--Thumb Tray button-->
+			<a id="tray-button"><img id="tray-arrow" src="{% static 'assets/images/fullscreen-gallery/button-tray-up.png' %}"/></a>
+			
+			<!--Navigation-->
+			<ul id="slide-list"></ul>
+			
+		</div>
+	</div>
+
+</body>
+</html>
