@@ -2259,6 +2259,19 @@
 
 /* Normal */
 
+
+	@media screen and (max-width: 1024px) {
+
+		#header .icons a {
+				margin-bottom: 40px;
+				color: #000;
+				padding-left: 10px;
+			}
+
+
+	}
+
+
 	@media screen and (min-width: 961px) and (max-width: 1620px) {
 
 		/* Main */
@@ -2615,5 +2628,16 @@
 				#footer .copyright li:first-child {
 					margin-top: 0;
 				}
+
+	}
+
+		@media screen and (min-width: 1440px) {
+
+		#header .icons a {
+				margin-bottom: 50px;
+				color: #000;
+				padding-left: 10px;
+			}
+
 
 	}
